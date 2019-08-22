@@ -1,0 +1,9 @@
+*.log
+
+.cache/
+.vscode/settings.json
+coverage/
+dist/
+node_modules/
+
+**/*.tsbuildinfo

@@ -1,0 +1,104 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
+  "license": "WTFPL",
+  "homepage": "https://github.com/$OWNER/$REPO#readme",
+  "repository": "git+https://github.com/$OWNER/$REPO.git",
+  "bugs": "https://github.com/$OWNER/$REPO/issues",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc --preserveWatchOutput",
+    "develop": "concurrently --color -n build,app,test,lint -c blue,yellow,magenta,cyan \"yarn build --watch\" \"yarn start\" \"yarn test --watch\" \"yarn lint --watch\"",
+    "develop:docker": "export DEVELOP=true; docker-compose up develop",
+    "postdevelop:docker": "docker-compose down --rmi local",
+    "start": "nodemon --watch dist dist/index.js",
+    "start:docker": "export NODE_ENV=production; docker-compose up --exit-code-from app app",
+    "poststart:docker": "docker-compose down --rmi local",
+    "test": "jest",
+    "lint": "esw --color --ignore-path .gitignore --ext .js,.ts ./",
+    "format": "pretty-quick",
+    "release": "standard-version --sign && git push --follow-tags"
+  },
+  "keywords": [],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "profiscience"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "yarn format --staged",
+      "pre-push": "yarn lint && yarn build --noEmit"
+    }
+  },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "/dist/",
+      "/node_modules/"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "html"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "js"
+    ],
+    "testMatch": [
+      "**/test/**"
+    ],
+    "transform": {
+      "^.+\\.ts$": "ts-jest"
+    }
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.1.0",
+    "@commitlint/config-conventional": "^8.1.0",
+    "@types/jest": "^24.0.18",
+    "@types/lodash": "^4.14.137",
+    "@types/node": "^12.7.2",
+    "commitlint": "^8.1.0",
+    "concurrently": "^4.1.2",
+    "cz-conventional-changelog": "^3.0.2",
+    "eslint": "^6.2.1",
+    "eslint-config-profiscience": "^4.0.8",
+    "eslint-watch": "^6.0.0",
+    "husky": "^3.0.4",
+    "jest": "^24.9.0",
+    "nodemon": "^1.19.1",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
+    "standard-version": "^7.0.0",
+    "ts-jest": "^24.0.2",
+    "ts-node": "^8.3.0",
+    "tslib": "^1.10.0",
+    "typescript": "^3.5.3"
+  }
+}

@@ -1,0 +1,20 @@
+language: node_js
+node_js:
+  - stable
+  - lts/carbon
+  - lts/dubnium
+branches:
+  only:
+    - master
+    - /v\d+\.\d+/
+cache:
+  yarn: true
+script:
+  - yarn lint
+  - yarn build
+  - yarn test
+after_script:
+  - npx codecov
+notifications:
+  email: false
+# add NPM deploy with `travis setup npm`, be sure to set skip_cleanup: true
