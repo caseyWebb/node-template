@@ -40,7 +40,10 @@
   "eslintConfig": {
     "extends": [
       "profiscience"
-    ]
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    }
   },
   "husky": {
     "hooks": {
