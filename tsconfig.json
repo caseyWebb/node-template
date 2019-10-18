@@ -2,19 +2,14 @@
   "compilerOptions": {
     "incremental": true,
     "target": "es2015",
-    "module": "commonjs",
+    "lib": ["es2015", "es2019.array"],
     "declaration": true,
-    "declarationMap": true,
     "sourceMap": true,
-    "outDir": "./dist",
     "rootDir": "./src",
-    "tsBuildInfoFile": "./.cache/tsbuildinfo",
     "importHelpers": true,
     "strict": true,
     "alwaysStrict": true,
     "moduleResolution": "node",
-    "baseUrl": "./",
-    "typeRoots": ["@types", "node_modules/@types"],
     "esModuleInterop": true
   },
   "exclude": ["**/dist/**", "**/test/**"]
