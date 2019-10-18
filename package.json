@@ -1,22 +1,26 @@
 {
-  "name": "badbadnotgood",
+  "name": "",
   "version": "0.0.0",
-  "description": "Functional validation, built for composition",
+  "private": true,
+  "description": "",
   "author": "Casey Webb <notcaseywebb@gmail.com> (https://caseyWebb.xyz)",
   "license": "WTFPL",
-  "homepage": "https://github.com/caseyWebb/badbadnotgood#readme",
-  "repository": "git+https://github.com/caseyWebb/badbadnotgood.git",
-  "bugs": "https://github.com/caseyWebb/badbadnotgood/issues",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "typings": "dist/esm/index.d.ts",
+  "homepage": "https://github.com/$OWNER/$REPO#readme",
+  "repository": "git+https://github.com/$OWNER/$REPO.git",
+  "bugs": "https://github.com/$OWNER/$REPO/issues",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "concurrently --color \"yarn build:cjs\" \"yarn build:esm\"",
-    "build:cjs": "tsc --preserveWatchOutput --module commonjs --outDir dist/cjs --tsBuildInfoFile .cache/cjs.tsbuildinfo",
-    "build:esm": "tsc --preserveWatchOutput --module esnext --outDir dist/esm --tsBuildInfoFile .cache/esm.tsbuildinfo",
+    "build": "tsc --preserveWatchOutput",
+    "develop": "concurrently --color -n build,app,test,lint -c blue,yellow,magenta,cyan \"yarn build --watch\" \"yarn start\" \"yarn test --watch\" \"yarn lint --watch\"",
+    "develop:docker": "export DEVELOP=true; docker-compose up develop",
+    "postdevelop:docker": "docker-compose down --rmi local",
+    "start": "nodemon --watch dist dist/index.js",
+    "start:docker": "export NODE_ENV=production; docker-compose up --exit-code-from app app",
+    "poststart:docker": "docker-compose down --rmi local",
     "test": "jest",
     "lint": "esw --color --ignore-path .gitignore --ext .js,.ts ./",
     "format": "pretty-quick",
@@ -78,8 +82,7 @@
     "singleQuote": true
   },
   "dependencies": {
-    "lodash": "^4.17.15",
-    "tslib": "^1.10.0"
+    "lodash": "^4.17.15"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.1.0",
@@ -101,6 +104,7 @@
     "standard-version": "^7.0.0",
     "ts-jest": "^24.1.0",
     "ts-node": "^8.4.1",
+    "tslib": "^1.10.0",
     "typescript": "^3.6.4"
   }
 }
