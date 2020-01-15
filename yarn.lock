@@ -146,7 +146,7 @@
     exec-sh "^0.3.2"
     minimist "^1.2.0"
 
-"@commitlint/cli@^8.3.4", "@commitlint/cli@^8.3.5":
+"@commitlint/cli@^8.3.5":
   version "8.3.5"
   resolved "https://registry.yarnpkg.com/@commitlint/cli/-/cli-8.3.5.tgz#6d93a3a8b2437fa978999d3f6a336bcc70be3fd3"
   integrity sha512-6+L0vbw55UEdht71pgWOE55SRgb+8OHcEwGDB234VlIBFGK9P2QOBU7MHiYJ5cjdjCQ0rReNrGjOHmJ99jwf0w==
@@ -1267,12 +1267,12 @@ commitizen@^4.0.3:
     strip-bom "4.0.0"
     strip-json-comments "3.0.1"
 
-commitlint@^8.3.4:
-  version "8.3.4"
-  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-8.3.4.tgz#b554ea949fe07c64ed11e0687f3fd4ac98acf241"
-  integrity sha512-wSMY5Kxa1kyIah3kFWh1311sGoar7aBPWlwvn+fv1kXv/B1uPBEMGYUdlanjNaGURBOtSX33zHLhLFUylM5+hQ==
+commitlint@^8.3.5:
+  version "8.3.5"
+  resolved "https://registry.yarnpkg.com/commitlint/-/commitlint-8.3.5.tgz#a8fd4aeadf1bac76976bac14127cbfbd666e0aa6"
+  integrity sha512-vsJr4azgWgwQcBtQOJEMUH5m7yzhD6p09dss7XNs4a88ksBtWAHKXoCKaBCt9ISS1yWcxFRUwnNy7zZhjmnXdg==
   dependencies:
-    "@commitlint/cli" "^8.3.4"
+    "@commitlint/cli" "^8.3.5"
     read-pkg "5.2.0"
     resolve-pkg "2.0.0"
 
