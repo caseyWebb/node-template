@@ -91,7 +91,7 @@
     "@types/lodash": "^4.14.150",
     "@types/node": "^13.13.2",
     "commitlint": "^8.3.5",
-    "concurrently": "^5.1.0",
+    "concurrently": "^5.2.0",
     "cz-conventional-changelog": "^3.1.0",
     "eslint": "^6.8.0",
     "eslint-config-profiscience": "^5.0.2",
