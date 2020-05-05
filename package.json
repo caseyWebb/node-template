@@ -104,7 +104,7 @@
     "standard-version": "^7.1.0",
     "ts-jest": "^25.4.0",
     "ts-node": "^8.10.1",
-    "tslib": "^1.11.1",
+    "tslib": "^1.11.2",
     "typescript": "^3.8.3"
   }
 }
