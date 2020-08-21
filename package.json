@@ -100,7 +100,7 @@
     "jest": "^25.5.4",
     "nodemon": "^2.0.4",
     "prettier": "^1.19.1",
-    "pretty-quick": "^2.0.1",
+    "pretty-quick": "^2.0.2",
     "standard-version": "^8.0.2",
     "ts-jest": "^25.5.1",
     "ts-node": "^8.10.2",
