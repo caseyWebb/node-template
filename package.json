@@ -88,7 +88,7 @@
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
     "@types/jest": "^26.0.14",
-    "@types/lodash": "^4.14.162",
+    "@types/lodash": "^4.14.163",
     "@types/node": "^14.14.3",
     "commitlint": "^11.0.0",
     "concurrently": "^5.3.0",
