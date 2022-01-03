@@ -17,7 +17,6 @@
 - [ ] Replace `$OWNER` and `$REPO`
 - [ ] Set `name` and `description` in package.json
 - [ ] Update name in LICENSE (or substitute license and change in package.json)
-- [ ] `travis setup npm`
 - [ ] :tada: Profit
 
 [npm-version]: https://npmjs.com/package/$REPO

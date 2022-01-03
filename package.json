@@ -13,6 +13,9 @@
   "files": [
     "dist"
   ],
+  "engines": {
+    "node": ">=12.0.0"
+  },
   "scripts": {
     "build": "tsc --preserveWatchOutput",
     "develop": "concurrently --color -n build,app,test,lint -c blue,yellow,magenta,cyan \"yarn build --watch\" \"yarn start\" \"yarn test --watch\" \"yarn lint --watch\"",
