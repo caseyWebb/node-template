@@ -6,10 +6,8 @@
 [![NPM Downloads][npm-stats-shield]][npm-stats]
 [![License][license-shield]][license]
 [![TypeScript][typescript-shield]][typescript]
-[![Build Status][travis-ci-shield]][travis-ci]
+[![Build Status][build-status-shield]][build-status]
 [![Coverage Status][codecov-shield]][codecov]
-[![Dependency Status][david-dm-shield]][david-dm]
-[![Dev Dependency Status][david-dm-dev-shield]][david-dm-dev]
 [![Downloads][npm-stats-shield]][npm-stats]
 
 ## TODO
@@ -27,11 +25,7 @@
 [license-shield]: https://img.shields.io/npm/l/$REPO.svg
 [typescript]: https://www.typescriptlang.org/
 [typescript-shield]: https://img.shields.io/badge/definitions-TypeScript-blue.svg
-[travis-ci]: https://travis-ci.org/$OWNER/$REPO/
-[travis-ci-shield]: https://img.shields.io/travis/$OWNER/$REPO/master.svg
+[build-status]: https://github.com/$OWNER/$REPO/actions/workflows/nodejs.yml
+[build-status-shield]: https://img.shields.io/github/workflow/status/$OWNER/$REPO/Node%20CI/master
 [codecov]: https://codecov.io/gh/$OWNER/$REPO
 [codecov-shield]: https://img.shields.io/codecov/c/github/$OWNER/$REPO.svg
-[david-dm]: https://david-dm.org/$OWNER/$REPO#type=peer
-[david-dm-shield]: https://img.shields.io/david/peer/$OWNER/$REPO.svg
-[david-dm-dev]: https://david-dm.org/$OWNER/$REPO&type=dev
-[david-dm-dev-shield]: https://david-dm.org/$OWNER/$REPO/dev-status.svg
