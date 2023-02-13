@@ -90,7 +90,7 @@
     "commitlint": "^16.1.0",
     "concurrently": "^7.0.0",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.7.0",
+    "eslint": "^8.34.0",
     "eslint-config-profiscience": "^7.0.1",
     "eslint-watch": "^8.0.0",
     "husky": "^7.0.0",
